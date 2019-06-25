@@ -1,0 +1,44 @@
+.header
+  &-wrap 
+    width: 100%
+    display: flex
+    justify-content: space-between
+    border: 1px solid red
+    margin: 0
+  &-logo
+    display: flex
+    flex-direction: row
+    align-items: center
+    justify-content: flex-start
+    padding: 0
+    &__title
+      color: $main-color
+      font-size: 30px
+      font-weight: 400
+      font-family: "Roboto - Thin"
+    &__image
+      width: 44px
+      height: 50px
+      margin-right: 11px
+  &-nav
+    display: flex
+    padding: 0
+    text-align: right
+    align-items: center
+    justify-content: flex-end
+    &__item 
+      display: flex
+      margin-left: 25px
+      // color: $second-color-text
+      font-family: "Roboto - Black"
+      font-size: 13px
+      font-weight: 400
+      text-transform: uppercase
+
+
+@media (max-width: 720px)
+  .header
+    &-wrap 
+      justify-content: center
+    &-nav
+      display: none

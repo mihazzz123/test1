@@ -44,6 +44,13 @@ section
   line-height: 22px
   letter-spacing: 0.42px
 
+a:hover, a:focus
+  color: #000000
+  outline: none
+  text-decoration: none
+button:focus
+  outline: none
+  text-decoration: none
 
 @media (max-width: 1200px)
   .container
@@ -67,9 +74,8 @@ section
   .button:hover
     background: $main-color
     color: $second-color-text
-    border-radius: 2px
     transform: scale(1.01)
-  
+    border-radius: 2px
   .video
     &-key:hover
       .video-key__play
@@ -78,3 +84,10 @@ section
         border: 2px solid $main-color
     .video-tag:hover
         color: $main-color
+  
+  .works__image:hover
+    border: 1px solid $main-color
+    border-radius: 5xp
+    transform: scale(1.3)
+    overflow: hidden
+    z-index: 2

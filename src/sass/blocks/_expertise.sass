@@ -1,0 +1,74 @@
+.expertise
+  &-wrap
+    margin-top: 70px
+    margin-bottom: 40px
+    ight: 0
+    text-align: center
+    justify-content: center
+  &__title
+    display: inline-block
+    margin-bottom: 15px
+  &__description
+    display: inline-block
+    position: relative
+    margin-bottom: 70px
+    opacity: 0.75
+    color: #2f2d35
+    font-family: "Playfair Display"
+    font-size: 14px
+    font-weight: 400
+    letter-spacing: 1.05px
+    &:after
+      content: ""
+      display: block
+      position: absolute
+      left: calc(50% - 25px)
+      bottom: -35px
+      width: 50px
+      height: 2px
+      background-color: #413d4b
+      opacity: 0.3
+  &-items
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+    justify-content: space-around
+    // padding: 50px 0
+  &__item
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center  
+    // width: calc(100% / 3)
+    // height: 250px
+    padding: 40px 30px 
+    &-icon
+      width: 50px
+      height: 50px
+      margin-bottom: 40px
+      // margin-top: 50px
+      background-image: url(../img/expertise/icons_item.png)
+    &-title
+      padding-bottom: 25px
+      margin: 0
+    &-description
+      // padding-bottom: 45px
+.expertise__item-icon2 .expertise__item-icon
+  background-position: 368px 0
+.expertise__item-icon3 .expertise__item-icon
+  background-position: 50px 0
+.expertise__item-icon4 .expertise__item-icon
+  background-position: 0 50px
+.expertise__item-icon5 .expertise__item-icon
+  background-position: 368px 50px
+.expertise__item-icon6 .expertise__item-icon
+  background-position: 50px 50px
+
+@media (min-width: 992px)
+  .expertise__item:nth-child(-n+3)
+    border-bottom: 1px solid #0000001f
+  .expertise__item:nth-child(3n+1), .expertise__item:nth-child(-3n+5)
+    border-right: 1px solid #0000001f
+@media (max-width: 767px)
+  .expertise__item
+    width: 95%

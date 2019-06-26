@@ -25,6 +25,9 @@
   font-weight: 700
   text-transform: uppercase
   letter-spacing: 1.1px
+  margin-left: auto
+  margin-right: auto
+  
 
 .description
   font-family: Roboto
@@ -35,7 +38,15 @@
 
 @media (max-width: 1200px)
   .container
+    margin: 0 auto
     width: 98%
+@media (max-width: 767px)
+  .container
+    margin: 0 auto
+  .title
+    width: 70%
+  .description
+    width: 85%
 
 // Hover эфекты 
 @media (min-width: 1200px)
@@ -49,3 +60,10 @@
     color: $second-color-text
     border-radius: 2px
     transform: scale(1.01)
+  
+  .video
+    &-key:hover
+      .video-key__play
+        color: $main-color
+      .video-key__circle
+        border: 2px solid $main-color

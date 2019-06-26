@@ -5,4 +5,23 @@
 .container
   max-width: 1200px
   margin: 0 auto
+  padding: 0
 
+
+@media (max-width: 1200px)
+  .container
+    width: 98%
+
+// Hover эфекты 
+@media (min-width: 1200px)
+  .header
+    &-nav
+      &__item:hover
+        color: $main-color
+
+  .hero
+    &__button:hover
+      background: $main-color
+      color: $second-color-text
+      border-radius: 2px
+      transform: scale(1.01)

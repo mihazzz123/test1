@@ -7,6 +7,31 @@
   margin: 0 auto
   padding: 0
 
+.button
+  font-family: "Hammersmith One"
+  font-size: 16px
+  font-weight: 400
+  text-transform: uppercase
+  color: $main-color
+  padding: 16px
+  border: 1px solid $main-color
+  background: none
+  cursor: pointer
+  transition: 0.3s
+
+.title
+  font-family: "Playfair Display"
+  font-size: 22px
+  font-weight: 700
+  text-transform: uppercase
+  letter-spacing: 1.1px
+
+.description
+  font-family: Roboto
+  font-weight: 300
+  line-height: 22px
+  letter-spacing: 0.42px
+
 
 @media (max-width: 1200px)
   .container
@@ -19,9 +44,8 @@
       &__item:hover
         color: $main-color
 
-  .hero
-    &__button:hover
-      background: $main-color
-      color: $second-color-text
-      border-radius: 2px
-      transform: scale(1.01)
+  .button:hover
+    background: $main-color
+    color: $second-color-text
+    border-radius: 2px
+    transform: scale(1.01)

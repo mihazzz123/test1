@@ -1,0 +1,35 @@
+.story
+  &-wrap
+    display: flex
+    padding-top: 70px
+    padding-bottom: 70px
+    justify-content: space-between
+  &-image 
+    justify-content: center
+    text-align: center
+    padding: 0
+    &__img 
+      height: 90%
+  &-text 
+    &__title
+      margin: 0 0 28px 0
+    &__description
+      display: inline-block
+      margin-bottom: 30px
+      color: #413d4b
+      font-size: 14px
+      
+@media (max-width: 720px)
+  .story
+    &-wrap 
+      flex-direction: column
+      align-items: center
+    &-image
+      margin-bottom: 30px
+      &__img
+        height: 80%
+    &-text 
+      justify-content: center
+      text-align: center
+      width: 80%
+      

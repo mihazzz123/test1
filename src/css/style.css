@@ -6350,6 +6350,35 @@ template {
   padding: 0;
 }
 
+.button {
+  font-family: "Hammersmith One";
+  font-size: 16px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #03d4c8;
+  padding: 16px;
+  border: 1px solid #03d4c8;
+  background: none;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.title {
+  font-family: "Playfair Display";
+  font-size: 22px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.1px;
+}
+
+.description {
+  font-family: Roboto;
+  font-weight: 300;
+  line-height: 22px;
+  letter-spacing: 0.42px;
+}
+
 @media (max-width: 1200px) {
   .container {
     width: 98%;
@@ -6360,7 +6389,7 @@ template {
   .header-nav__item:hover {
     color: #03d4c8;
   }
-  .hero__button:hover {
+  .button:hover {
     background: #03d4c8;
     color: #ffffff;
     border-radius: 2px;
@@ -6521,17 +6550,62 @@ template {
   color: #ffffff;
 }
 
-.hero__button {
-  font-family: "Hammersmith One";
-  font-size: 16px;
-  font-weight: 400;
-  text-transform: uppercase;
-  color: #03d4c8;
-  padding: 16px;
-  border: 1px solid #03d4c8;
-  background: none;
-  cursor: pointer;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
+.story-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 70px;
+  padding-bottom: 70px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.story-image {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  padding: 0;
+}
+
+.story-image__img {
+  height: 90%;
+}
+
+.story-text__title {
+  margin: 0 0 28px 0;
+}
+
+.story-text__description {
+  display: inline-block;
+  margin-bottom: 30px;
+  color: #413d4b;
+  font-size: 14px;
+}
+
+@media (max-width: 720px) {
+  .story-wrap {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .story-image {
+    margin-bottom: 30px;
+  }
+  .story-image__img {
+    height: 80%;
+  }
+  .story-text {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: center;
+    width: 80%;
+  }
 }
 /*# sourceMappingURL=style.css.map */

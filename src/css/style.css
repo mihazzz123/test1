@@ -6683,6 +6683,16 @@ button:focus {
   background-position: center bottom;
   background-size: cover;
   height: 550px;
+  position: relative;
+}
+
+.video-modal {
+  width: 90%;
+  height: 90%;
+  display: none;
+  -webkit-transition: .5s;
+  transition: .5s;
+  opacity: 0;
 }
 
 .video-key {
@@ -6726,6 +6736,21 @@ button:focus {
   letter-spacing: 0.8px;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+  cursor: pointer;
+}
+
+.active {
+  display: block;
+  opacity: 1;
+  -webkit-transition: .5s;
+  transition: .5s;
+  z-index: 1000;
+  overflow: hidden;
+  position: fixed;
+  top: 5%;
+  left: 5%;
+  bottom: 5%;
+  right: 5%;
 }
 
 .expertise-wrap {

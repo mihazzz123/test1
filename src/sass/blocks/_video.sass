@@ -8,6 +8,13 @@
   background-position: center bottom
   background-size: cover
   height: 550px
+  position: relative
+  &-modal 
+    width: 90%
+    height: 90%
+    display: none
+    transition: .5s
+    opacity: 0
   &-key 
     width: 100px
     height: 100px
@@ -34,4 +41,17 @@
     text-transform: uppercase
     letter-spacing: 0.8px
     transition: 0.3s
+    cursor: pointer
+
+.active
+  display: block
+  opacity: 1
+  transition: .5s
+  z-index: 1000
+  overflow: hidden
+  position: fixed
+  top: 5%
+  left: 5%
+  bottom: 5%
+  right: 5%
 

@@ -6,25 +6,30 @@ var jsmin = require('gulp-jsmin');
 var rename = require('gulp-rename');
 
 
-gulp.task('minify-css', () => {
-  return gulp.src('.src/css/style/*.css')
-  .pipe(cleanCSS({compatibility: 'ie8'}))
-  .pipe(gulp.dest('dist/css/'));
+gulp.task('minify-css', function(done) {
+  return gulp.src('./src/css/style.css')
+  .pipe(cleanCSS({
+    compatibility: 'ie8'
+  }))
+  .pipe(gulp.dest('dist/css/'))
+
   done();
 });
 
-gulp.task('minify', () => {
-  return gulp.src('src/*.html')
-  .pipe(htmlmin({collapseWhitespace: true}))
-  .pipe(gulp.dest('dist'));
+
+gulp.task('htmlmin', function(done) {
+  return gulp.src('./src/*.html')
+  .pipe(htmlmin({ collapseWhitespace: true }))
+  .pipe(gulp.dest('dist'))
+  
   done();
 });
 
-gulp.task('tinypng', function () {
-  gulp.src('src/img/**/*.{png,jpg,jpeg}')
+gulp.task('tinypng', function (done) {
+  return gulp.src('./src/img/**/*.{png,jpg,jpeg}')
   .pipe(tinypng({
     key: '98Qy10jrW6zRszWbgLCh02Lzp5qkxgLf',
-     }))
+  }))
   .pipe(gulp.dest('dist/img/'));
   done();
 });
@@ -43,7 +48,7 @@ return gulp.src("./src/js/*.min.js")
 done();
 });
  
-gulp.task('default', gulp.series('minify-css', 'min-js', 'move-js', 'fonts', 'tinypng', 'htmlmin', function(done) {
+gulp.task('default', gulp.series('minify-css', 'min-js', 'move-js', 'tinypng', 'htmlmin', function(done) {
 // do more stuff
 done();
 }));

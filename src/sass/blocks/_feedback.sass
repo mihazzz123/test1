@@ -35,7 +35,7 @@
     margin-bottom: 13px
     color: $second-color-text
     font-family: "Roboto - Black"
-    font-size: 14px
+    font-size: 18px
     font-weight: 400
     line-height: 22px
     text-transform: uppercase
@@ -44,7 +44,7 @@
       display: inline-block
       margin-bottom: 45px
       font-family: Roboto
-      font-size: 13px
+      font-size: 12px
       font-weight: 300
       color: $second-color-text
       line-height: 22px
@@ -72,6 +72,7 @@
   align-items: center
   justify-content: center
   text-align: center
+  width: 100%
 #slider
   width: 100%
   position: relative
@@ -84,7 +85,7 @@
   text-align: center
 #slidewrapper 
   position: relative
-  width: calc(100% * 5)
+  // width: calc(100% * 5)
   transition: 1s
   transition-timing-function: cubic-bezier(.67,.01,.23,1)
 #slidewrapper, #slidewrapper ul, #slidewrapper li 
@@ -142,3 +143,16 @@
   transition: 0.7s
   transform: scale(1.2)
 
+@media (max-width: 767px)
+  #prev-btn, #next-btn 
+    display: none
+    opacity: 0
+  .feedback__description
+    width: 90%
+  #nav-btns
+    margin: 20px auto 0 auto
+  .slick-track
+    display: flex
+    flex-wrap: wrap
+  .feedback__name-tag
+    margin-bottom: 20px

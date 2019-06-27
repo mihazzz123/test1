@@ -64,5 +64,11 @@
   .expertise__item:nth-child(3n+1), .expertise__item:nth-child(-3n+5)
     border-right: 1px solid #0000001f
 @media (max-width: 767px)
-  .expertise__item
-    width: 95%
+  .expertise
+    &__item
+      width: 95%
+      &-title 
+        font-size: 20px
+      &-description
+        font-size: 12px
+        width: 70%

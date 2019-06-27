@@ -24,7 +24,8 @@ $(document).ready(function () {
     slideToShow: 1,
     slideToScroll: 1,
     centerMode: true,
-    arrow: true,
+    centerPadding: '15px',
+    arrows: true,
     autoplay: true, 
     autoplaySpeed: 7000,
     prevArrow: $('#prev-btn'),
@@ -36,9 +37,20 @@ $(document).ready(function () {
     slidesToShow: 5,
     slidesToScroll: 0,
     asNavFor: '#slider',
-    dots: true,
+    // dots: true,
     centerMode: true,
-    focusOnSelect: true
+    focusOnSelect: true,
+    arrows: false,
+    responsive: [
+      {
+        breakpoint: 767,
+        settings: {
+          centerPadding: '0px',
+          arrows: false,
+          slidesToShow: 3
+        }
+      }
+      ]
   });
 
   // Валидация

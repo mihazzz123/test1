@@ -1,0 +1,35 @@
+.form
+  display: flex
+  flex-direction: column
+  text-align: center
+  justify-content: center
+  max-width: 460px
+  margin: 0 auto
+  &__title
+    text-align: center
+    margin-bottom: 35px
+  &__input
+    color: #000000
+    margin-bottom: 20px
+    padding: 20px 15px
+    border: 1px solid #000000
+    opacity: 0.3
+    &::-webkit-input-placeholder 
+      align-items: flex-start
+    &::-moz-placeholder          
+      align-items: flex-start
+    &:-moz-placeholder           
+      align-items: flex-start
+    &:-ms-input-placeholder 
+      align-items: flex-start
+  &__button
+    display: block
+    max-width: 120px
+    margin: 0 auto
+.imput_4
+  height: 200px
+  resize: none
+
+@media (max-width: 543px)
+  .form
+    width: 90%

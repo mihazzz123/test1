@@ -1,0 +1,157 @@
+.footer
+  padding-top: 70px
+  background-image: url(../img/footer/footer_bg.jpg)
+  background-position: center bottom
+  background-size: cover
+  color: $second-color-text
+  &-wrap 
+    height: 210px
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+  &__col
+    display: flex
+    flex-direction: column
+  &__row
+    display: flex
+    flex-direction: row
+    align-items: center
+    justify-content: flex-start
+    margin-bottom: 27px
+  &-text
+    &__logo
+      &-img 
+        display: block
+        margin-right: 10px
+        width: 44px
+        height: 50px
+      &-title
+        display: block
+        color: $main-color
+        // background-clip: text
+        font-family: "Roboto - Thin"
+        font-size: 30px
+        font-weight: 400
+  &__description
+    font-family: Roboto
+    font-size: 16px
+    font-weight: 300
+    line-height: 26px
+    letter-spacing: 0.35px
+  &-address 
+    &__item
+      &-text 
+        margin-left: 15px
+  &__title 
+    margin-top: 20px
+    margin-bottom: 30px
+    font-family: "Roboto - Black"
+    font-size: 15px
+    font-weight: 400
+    line-height: 26px
+    text-transform: uppercase
+    letter-spacing: 0.75px
+  &-search
+    display: flex
+    flex-direction: row
+    flex-wrap: no-wrap
+    align-items: center
+    &__input
+      padding: 12px 
+      margin-right: 10px
+      height: 45px
+      background: none
+      border: 1px solid #ffffff
+      color: $second-color-text
+      font-size: 16px
+      &::-webkit-input-placeholder 
+        color: $second-color-text
+        text-overflow: ellipsis
+      &::-moz-placeholder          
+        color: $second-color-text
+        text-overflow: ellipsis
+      &:-moz-placeholder           
+        color: $second-color-text
+        text-overflow: ellipsis
+      &:-ms-input-placeholder 
+        color: $second-color-text
+        text-overflow: ellipsis
+    &__button
+      color: #000000
+      font-size: 30px
+      line-height: 30px
+      padding: 0
+      width: 70px
+      height: 45px
+      align-items: center
+      justify-content: center
+      border: 1px solid #ffffff
+      background-color: #ffffff
+      opacity: 0.5
+  &-contact
+    &__links
+      display: flex
+      flex-direction: row
+      margin-top: 27px
+      // justify-content: space-between
+    &__link
+      margin-right: 10px
+      display: block
+      align-items: center
+      justify-content: center
+      text-align: center
+      width: 35px
+      height: 35px
+      border-radius: 50%
+      color: $second-color-text
+      border: 1px solid #ffffff
+      font-size: 20px
+      line-height: 35px
+      transition: 0.3s
+  &-box 
+    display: flex
+    flex-wrap: wrap
+    margin-top: 70px
+    margin-bottom: 70px
+    justify-content: space-between
+  &-nav
+    &__link
+      margin-bottom: 40px
+      display: inline-block
+      color: $second-color-text
+      font-family: Roboto
+      font-size: 14px
+      font-weight: 400
+      line-height: 26px
+      text-transform: uppercase
+      letter-spacing: 0.35px
+  &__copyright
+    width: 226px
+    height: 14px
+    color: #ffffff
+    font-family: Roboto
+    font-size: 14px
+    font-weight: 400
+    line-height: 26px
+    letter-spacing: 0.35px
+
+@media (max-width: 992px)
+  .footer
+    &-wrap
+      margin: 0 auto
+      height: 520px
+      width: 90%
+      justify-content: center
+      align-items: center
+      text-align: center
+    &-row, &__col 
+      justify-content: center
+      align-items: center
+      text-align: center
+@media (max-width: 576px)
+  .footer
+    &-wrap 
+      height: 700px
+    &-box
+      justify-content: center
+      margin-bottom: 20px

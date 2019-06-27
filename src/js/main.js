@@ -1,11 +1,8 @@
 $(document).ready(function () {
-
-  var video = $('#video');
-      play = $('#playVideo, .video-tag')
-
-  
   // Модальное окно видео
-
+  var video = $('#video');
+  var play = $('#playVideo, .video-tag');
+  
   play.click(function () {
     video.addClass('active');
     $('body').css({'overflow' : 'hidden', 'background' : '#000000ed'});
@@ -15,10 +12,33 @@ $(document).ready(function () {
     $(document).mouseup(function (e) {
       if (!video.is(e.target)
       && video.has(e.target).length === 0) {
-      video.removeClass('active');
-      $('body').attr('style', '');
+        video.removeClass('active');
+        $('body').attr('style', '');
       }
     });
+  });
+  
+  // Слайдер
+
+  $('#slider').slick({
+    slideToShow: 1,
+    slideToScroll: 1,
+    centerMode: true,
+    arrow: true,
+    autoplay: true, 
+    autoplaySpeed: 7000,
+    prevArrow: $('#prev-btn'),
+    nextArrow: $('#next-btn'),
+    asNavFor: '.slider-nav',
+    dotsClass: 'slider-nav slide-nav-btn'
+  });
+  $('.slider-nav').slick({
+    slidesToShow: 5,
+    slidesToScroll: 0,
+    asNavFor: '#slider',
+    dots: true,
+    centerMode: true,
+    focusOnSelect: true
   });
 
 });

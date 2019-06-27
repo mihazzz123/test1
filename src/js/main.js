@@ -41,4 +41,11 @@ $(document).ready(function () {
     focusOnSelect: true
   });
 
+  // Валидация
+  $('#form').validetta({
+    // errorTemplateClass : 'validetta-bubble',
+    // bubblePosition: 'bottom',
+    // bubbleGapTop: 5,
+    // bubbleGapLeft: 150
+  });
 });

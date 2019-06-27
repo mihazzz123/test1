@@ -361,13 +361,18 @@
   <section class="form-section">
     <div class="container row">
       <h2 class="form__title title">GIVE US A GOOD NEWS</h2>
-      <form action="#" class="form col">
-        <input type="text" class="form__input" placeholder="Name">
-        <input type="text" class="form__input" placeholder="Email">
-        <input type="text" class="form__input" placeholder="Subject">
-        <textarea class="form__input imput_4" placeholder="Your Message"></textarea>
-        <button class="button form__button">submit</button>
+
+      <form action="#" class="form col" id="form">
+        <input type="text" class="form__input" placeholder="Name"name="user_name" data-validetta="required,minLength[2],maxLength[15]">
+
+        <input type="text" class="form__input" placeholder="Email" name="user_mail" data-validetta="required,email">
+
+        <input type="text" class="form__input" placeholder="Subject" data-validetta="required,minLength[5],maxLength[20]">
+
+        <textarea class="form__input imput_4" placeholder="Your Message" data-validetta="required"></textarea>
+        <button type="submit" class="button form__button">submit</button>
       </form>
+
     </div>
   </section>
 
@@ -470,6 +475,7 @@
   <script src="js/jquery-migrate-1.2.1.min.js"></script>
   <script src="js/jquery-3.3.1.min.js"></script>
   <script src="js/slick.min.js"></script>
+  <script src="js/validetta.min.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html> 

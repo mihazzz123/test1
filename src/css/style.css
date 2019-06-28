@@ -6548,6 +6548,29 @@ button:focus {
   text-decoration: none;
 }
 
+#go-top {
+  display: none;
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  bottom: 20px;
+  right: 5%;
+  z-index: 9999;
+  border-radius: 50%;
+  border: 0;
+  -webkit-box-shadow: 0 0 30px 10px #555555;
+          box-shadow: 0 0 30px 10px #555555;
+  padding: 0;
+  background-color: 0;
+  opacity: 0.25;
+  -webkit-transform: 0.4s;
+          transform: 0.4s;
+}
+
+#go-top i {
+  font-size: 34px;
+}
+
 @media (max-width: 1200px) {
   .container {
     margin: 0 auto;
@@ -6576,6 +6599,17 @@ button:focus {
 }
 
 @media (min-width: 1200px) {
+  #go-top {
+    display: block;
+  }
+  #go-top:hover {
+    opacity: 0.8;
+  }
+  .button:hover {
+    background: #0efcee;
+    -webkit-box-shadow: 0 0 15px 3px #0efcee;
+            box-shadow: 0 0 15px 3px #0efcee;
+  }
   .header-nav__item:hover {
     color: #03d4c8;
   }
@@ -6616,6 +6650,22 @@ button:focus {
   .slide-nav-btn:hover {
     cursor: pointer;
   }
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 75px;
+  margin: 0 auto;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  z-index: 99999;
+  background-image: url(../img/hero/hero_bg.jpg);
+  background-position: center top;
+  background-size: cover;
+  opacity: 0.8;
 }
 
 .header-wrap {
@@ -6701,6 +6751,7 @@ button:focus {
 }
 
 .hero {
+  padding-top: 100px;
   position: relative;
 }
 

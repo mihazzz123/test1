@@ -6868,11 +6868,12 @@ button:focus {
   background-size: cover;
   height: 550px;
   position: relative;
+  -webkit-transition: .5s;
+  transition: .5s;
 }
 
 .video-modal {
   width: 90%;
-  height: 90%;
   display: none;
   -webkit-transition: .5s;
   transition: .5s;
@@ -6941,6 +6942,33 @@ iframe {
   width: 100%;
   height: 100%;
   frameborder: 0;
+}
+
+@media (max-width: 1200px) {
+  .video-modal {
+    max-height: 400px;
+  }
+  .active {
+    top: 15%;
+  }
+}
+
+@media (max-width: 767px) {
+  .video-modal {
+    max-height: 300px;
+  }
+  .active {
+    top: 15%;
+  }
+}
+
+@media (max-width: 546px) {
+  .video-modal {
+    max-height: 200px;
+  }
+  .active {
+    top: 15%;
+  }
 }
 
 .expertise-wrap {

@@ -22,8 +22,8 @@ $(document).ready(function () {
 
   $('#slider').slick({
     slideToShow: 1,
-    slideToScroll: 1,
     centerMode: true,
+    slideToScroll: 1,
     centerPadding: '15px',
     arrows: true,
     autoplay: true, 
